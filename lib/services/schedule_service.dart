@@ -69,7 +69,8 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ScheduleService {
-  static const String baseUrl = 'http://10.0.2.2:3000';
+  // static const String baseUrl = 'http://10.0.2.2:3000';
+  static const String baseUrl = 'https://profound-opossum-loudly.ngrok-free.app';
 
   Future<List<dynamic>> getAllSchedules() async {
     final response = await http.get(Uri.parse('$baseUrl/schedules'));

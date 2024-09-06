@@ -8,7 +8,7 @@ class LoginSuccessScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff3BECEC),
+      backgroundColor: const Color(0xffB59AD7),
       body: Column(
         children: [
           const SizedBox(height: 50),

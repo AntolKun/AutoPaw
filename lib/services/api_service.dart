@@ -3,9 +3,9 @@ import 'package:http/http.dart' as http;
 
 class ApiService {
   static const String baseUrl =
-      'http://10.0.2.2:3000/api/auth'; // Ubah sesuai IP lokal
+      // 'http://10.0.2.2:3000/api/auth'; // Ubah sesuai IP lokal
   // 'https://poorly-willing-goblin.ngrok-free.app/api/auth'; // Ubah sesuai IP lokal, ini pake ngrok buat testing
-  // 'https://profound-opossum-loudly.ngrok-free.app/api/auth'; // Ubah sesuai IP lokal, ini pake ngrok buat testing, punya widie
+  'https://profound-opossum-loudly.ngrok-free.app/api/auth'; // Ubah sesuai IP lokal, ini pake ngrok buat testing, punya widie
   // 'https://a5a0-103-106-114-224.ngrok-free.app/api/auth'; // Ubah sesuai IP lokal, ini pake ngrok buat testing, punya widie
 
   static Future<Map<String, dynamic>?> login(

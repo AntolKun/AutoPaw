@@ -10,7 +10,7 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Color(0xff3BECEC),
+      backgroundColor: Color(0xffB59AD7),
       body: SafeArea(
         child: SizedBox(
           width: double.infinity,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kucing_otomatis/screens/smart/components/device_detail.dart';
 import 'package:kucing_otomatis/screens/smart/components/schedule.dart';
+import 'package:http/http.dart' as http;
 
 class DeviceInfoScreen extends StatelessWidget {
   final String deviceName;
@@ -15,7 +16,7 @@ class DeviceInfoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:const Color(0xff7469B6),
+      backgroundColor: const Color(0xff7469B6),
       appBar: AppBar(
         title: Text(deviceName),
       ),
@@ -71,20 +72,34 @@ class DeviceInfoScreen extends StatelessWidget {
             const SizedBox(height: 16.0),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  foregroundColor: Colors.black),
-              onPressed: () {
-                // Handle Feed Now action
-                print('Feed Now pressed');
+                  backgroundColor: Colors.white, foregroundColor: Colors.black),
+              onPressed: () async {
+                final response = await http.post(
+                  Uri.parse(
+                      // 'http://10.0.2.2:3000/api/feed-now'),
+                      'https://profound-opossum-loudly.ngrok-free.app/api/feed-now'),
+                );
+
+                if (response.statusCode == 200) {
+                  print('Feed Now action successful');
+                  // Optionally, you can show a Snackbar or Toast for user feedback
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Makanan Kucing diberikan')),
+                  );
+                } else {
+                  print('Failed to perform Feed Now action');
+                  // Optionally, show a failure message
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Gagal memberi makan kucing')),
+                  );
+                }
               },
               child: const Text('Feed Now'),
             ),
             const SizedBox(height: 16.0),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: Colors.black
-              ),
+                  backgroundColor: Colors.white, foregroundColor: Colors.black),
               onPressed: () {
                 // Handle Schedule action
                 Navigator.push(

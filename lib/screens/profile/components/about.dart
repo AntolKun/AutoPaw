@@ -9,7 +9,7 @@ class AboutPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Tentang Aplikasi'),
       ),
-      backgroundColor: const Color(0xff7469B6),
+      backgroundColor: const Color(0xffB59AD7),
       body: SingleChildScrollView(
         // Tambahkan SingleChildScrollView
         child: Padding(

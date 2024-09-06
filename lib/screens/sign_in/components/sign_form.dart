@@ -316,19 +316,19 @@ class _SignFormState extends State<SignForm> {
             ),
           ),
           const SizedBox(height: 20),
-          Row(
-            children: [
-              const Spacer(),
-              GestureDetector(
-                onTap: () => Navigator.pushNamed(
-                    context, ForgotPasswordScreen.routeName),
-                child: const Text(
-                  "Forgot Password",
-                  style: TextStyle(decoration: TextDecoration.underline),
-                ),
-              )
-            ],
-          ),
+          // Row(
+          //   children: [
+          //     const Spacer(),
+          //     GestureDetector(
+          //       onTap: () => Navigator.pushNamed(
+          //           context, ForgotPasswordScreen.routeName),
+          //       child: const Text(
+          //         "Forgot Password",
+          //         style: TextStyle(decoration: TextDecoration.underline),
+          //       ),
+          //     )
+          //   ],
+          // ),
           FormError(errors: errors),
           const SizedBox(height: 25),
           ElevatedButton(

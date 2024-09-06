@@ -9,7 +9,7 @@ class SmartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Color(0xff7469B6),
+      backgroundColor: Color(0xffB59AD7),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(vertical: 16),
