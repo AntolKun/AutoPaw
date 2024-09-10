@@ -19,9 +19,9 @@ class DeviceInfoGrid extends StatelessWidget {
           _buildGridItem(
             context,
             'Pakan Kucing',
-            'assets/images/bardicctv.jpg',
+            'assets/images/alat.jpg',
             () => _navigateToDeviceInfo(
-                context, 'Pakan Kucing', 'assets/images/bardicctv.jpg'),
+                context, 'Pakan Kucing', 'assets/images/alat.jpg'),
           ),
         ],
       ),

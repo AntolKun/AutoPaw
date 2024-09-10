@@ -114,8 +114,8 @@ class CatInfoGrid extends StatelessWidget {
               borderRadius: BorderRadius.circular(16.0),
               child: Image.asset(
                 imagePath,
-                height: 80.0,
-                width: 80.0,
+                height: 70.0,
+                width: 70.0,
                 fit: BoxFit.cover,
               ),
             ),

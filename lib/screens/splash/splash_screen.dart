@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   List<Map<String, String>> splashData = [
     {
       "text": "",
-      "image": "assets/images/AutoPaw.jpg"
+      "image": "assets/images/autopaw.png"
     },
   ];
   @override
